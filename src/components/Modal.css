@@ -1,0 +1,82 @@
+.modal-container {
+  width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 2000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+  background: rgba(73, 149, 207);
+  border: none;
+  width: 45%;
+  height: 55%;
+  min-width: 300px;
+  padding: 10px;
+  position: relative;
+  border-radius: 12px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+h2, h3, p {
+  color: #fff;
+}
+
+.fechar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+	font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgb(73, 149, 207);
+	border: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif, monospace;
+	cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-footer button {
+  border: 0;
+  color: #fff;
+  background: rgba(112, 213, 249, .5);
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 15px 5px 0;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.modal-footer button:hover {
+  opacity: 0.8;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
