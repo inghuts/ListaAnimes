@@ -23,6 +23,7 @@ class App extends React.Component {
     this.fecharModal = this.fecharModal.bind(this);
   }
 
+  //função manipuladora dos campos do formulário de inserção de animes
   handleInput(e) {
     if (e.target.getAttribute('name') == 'titulo') {
       this.setState({
@@ -67,6 +68,7 @@ class App extends React.Component {
     }
   }
 
+  //função para adicionar animes à lista
   addAnime(e){
     e.preventDefault();
     const novoAnime = this.state.animeAtual;
@@ -92,6 +94,8 @@ class App extends React.Component {
     }
   }
 
+  //função para verificar se o anime que o usuário está tentando inserir 
+  //já se encontra na lista de animes
   verificaSeJaExisteAnime(anime) {
     for (let i=0; i<this.state.animes.length; i++) {
       if (this.state.animes[i].titulo.includes(anime.titulo) == true) {
@@ -101,12 +105,15 @@ class App extends React.Component {
     }
   }
 
+  //setando o estado do modal para fechado
   state = {modalAberto: false}
 
+  //função para abrir o modal
   abrirModal() {
     this.setState({modalAberto: true});
   }
 
+  //função para fechar o modal
   fecharModal() {
     this.setState({modalAberto: false});
   }
